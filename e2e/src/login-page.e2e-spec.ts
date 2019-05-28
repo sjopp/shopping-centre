@@ -16,7 +16,7 @@ describe('Login Page e2e tests', () => {
 
     loginPage.navigateTo();
 
-    expect(loginPage.getTitleText()).toEqual('Welcome to SJ Golf!');
+    expect(loginPage.getTitleText()).toEqual('Welcome!');
   });
 
   xit('when username and password exist and correct proceed to next page', () => {

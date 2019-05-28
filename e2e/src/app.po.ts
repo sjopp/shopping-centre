@@ -1,11 +1,15 @@
 import { browser, by, element } from 'protractor';
 
 export class AppPage {
-  navigateTo() {
+  navigateToLogin() {
     return browser.get(browser.baseUrl) as Promise<any>;
   }
 
-  getTitleText() {
-    return element(by.css('app-root h1')).getText() as Promise<string>;
+  isHeaderPresent() {
+    return element(by.id('header')).isPresent();
+  }
+
+  isFooterPresent() {
+    return element(by.id('footer')).isPresent();
   }
 }
