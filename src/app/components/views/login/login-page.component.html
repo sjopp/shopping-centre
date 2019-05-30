@@ -8,17 +8,17 @@
     <div class="col-3 input-field-container py-4">
       <div class="row justify-content-center">
         <div class="col-10 text-center mb-2">
-          <input type="text" placeholder="Username" id="login-username-field" class="input-field username-box">
+          <input type="text" placeholder="Username" id="login-username-field" class="input-field username-box" (input)="checkInputs($event)">
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-10 text-center mb-4">
-          <input type="text" placeholder="Password" id="login-password-field" class="input-field password-box">
+          <input type="password" placeholder="Password" id="login-password-field" class="input-field password-box" (input)="checkInputs($event)">
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-8 text-center">
-          <button type="button" class="btn btn-primary login-button" id="login-button">Login</button>
+          <button type="button" class="btn btn-primary login-button" id="login-button" (click)="verifyDetailsAndRoute()" [disabled]="!isButtonEnabled">Login</button>
         </div>
       </div>
     </div>

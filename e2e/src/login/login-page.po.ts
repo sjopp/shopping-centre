@@ -3,7 +3,7 @@ import {browser, by, element} from 'protractor';
 export class LoginPage {
 
   public navigateTo() {
-    return browser.get(browser.baseUrl) as Promise<any>;
+    return browser.get(browser.baseUrl + '/login') as Promise<any>;
   }
 
   public getTitleText() {
@@ -28,5 +28,9 @@ export class LoginPage {
 
   public clickLoginButton() {
     element(by.id('login-button')).click();
+  }
+
+  isLoginButtonDisabled() {
+    return element(by.id('login-button')).getAttribute('disabled');
   }
 }
