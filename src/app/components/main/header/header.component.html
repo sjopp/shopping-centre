@@ -1,7 +1,23 @@
 <div class="container-fluid">
-  <div class="row" id="header">
-    <div class="col-12 text-left pl-4 pt-2">
+  <div class="row align-items-center" id="header">
+    <div class="col-2 text-left pl-4 pt-2">
       <img src="assets/logo.png" class="header-logo">
+    </div>
+    <div class="col-2 text-center">
+      <div>Home</div>
+    </div>
+    <div class="col-2 text-center">
+      <div>Clubs</div>
+    </div>
+    <div class="col-2 text-center">
+      <div>Accessories</div>
+    </div>
+    <div class="col-2 text-center">
+      <a id="header-login-label" (click)="navigate('login')">Login</a>
+<!--      <a id="header-login-label" (click)="navigate('login')">Login</a>-->
+    </div>
+    <div class="col-2 text-right pr-4">
+      <img src="assets/search-icon.svg" alt="">
     </div>
   </div>
 </div>

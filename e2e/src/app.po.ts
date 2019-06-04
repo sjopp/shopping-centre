@@ -1,8 +1,8 @@
 import { browser, by, element } from 'protractor';
 
 export class AppPage {
-  navigateToLogin() {
-    return browser.get(browser.baseUrl) as Promise<any>;
+  public navigateToHome() {
+    browser.get(browser.baseUrl);
   }
 
   isHeaderPresent() {
@@ -11,5 +11,13 @@ export class AppPage {
 
   isFooterPresent() {
     return element(by.id('footer')).isPresent();
+  }
+
+  clickLoginOption() {
+    element(by.id('header-login-label')).click();
+  }
+
+  public getUrl() {
+    return browser.getCurrentUrl();
   }
 }
