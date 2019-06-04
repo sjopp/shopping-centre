@@ -13,8 +13,8 @@ export class AppPage {
     return element(by.id('footer')).isPresent();
   }
 
-  clickLoginOption() {
-    element(by.id('header-login-label')).click();
+  clickLabel(ele: string) {
+    element(by.id('header-' + ele + '-label')).click();
   }
 
   public getUrl() {

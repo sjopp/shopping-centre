@@ -17,15 +17,21 @@ describe('workspace-project App', () => {
 
   });
 
-  it('2 - click Login on header routes to login page', () => {
+  it('2 - clicking header labels should navigate to correct page', () => {
 
     page.navigateToHome();
 
     browser.sleep(500);
-    page.clickLoginOption();
+    page.clickLabel('login');
 
     browser.sleep(500);
     expect(page.getUrl()).toContain('/login');
+
+    browser.sleep(500);
+    page.clickLabel('home');
+
+    browser.sleep(500);
+    expect(page.getUrl()).toContain('/home');
 
   });
 });
